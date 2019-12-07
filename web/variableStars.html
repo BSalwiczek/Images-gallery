@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Strona o moim hobby - astronomii">
+  <meta name="keywords" content="Astronomia, astrofizyka, pasja, hobby">
+  <meta name="author" content="Bartosz Salwiczek">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gwiazdy zmienne</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Cabin&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="styles/style.css">
+  <link rel="stylesheet" type="text/css" href="styles/gallery.css">
+  <script src="https://kit.fontawesome.com/50926e5c21.js" crossorigin="anonymous"></script> <!-- font awesome -->
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#since" ).datepicker();
+    $( "#to" ).datepicker();
+    var availableTags = [
+      "R Sct",
+      "R Ser",
+      "R Aql",
+      "T UMa",
+      "S UMa",
+      "DF Cyg",
+      "S Umi",
+      "R Dra",
+      "RT Cyg",
+    ];
+    $( "#search" ).autocomplete({
+      source: availableTags
+    });
+  } );
+  </script>
+</head>
+<body lang="pl">
+  <nav>
+    <div class="nav-item">
+      <a href="index.html"><i class="fas fa-home"></i> &nbsp;Strona główna</a>
+    </div>
+    <div class="nav-item nav-active">
+      <a href="variableStars.html"><i class="fas fa-star"></i> &nbsp;Gwiazdy zmienne</a>
+    </div>
+    <div class="nav-item expand">
+      <a href="#!" id="expanded-link"><i class="fas fa-long-arrow-alt-down"></i> &nbsp;Ciekawe tematy</a>
+      <div class="expand-menu">
+          <a href="solarSystem.html"><i class="fas fa-sun"></i> &nbsp;Układ Słoneczny</a>
+          <a href="astronomicalEvents.html"><i class="fas fa-calendar-alt"></i> &nbsp;Najbliższe wydarzenia astronomiczne</a>
+      </div>
+    </div>
+    <div class="nav-item">
+      <a href="contact.html"><i class="fas fa-envelope-open-text"></i> &nbsp;Kontakt</a>
+    </div>
+  </nav>
+
+  <div class="img-container">
+      <header>
+        Gwiazdy zmienne
+      </header>
+      <img class="main-img" src="img/header-img.jpg" />
+  </div>
+
+  <section class="curiosity">
+    <p>
+      Czy wiesz że pomimo że Wenus jest dalej od Słońca jest na niej cieplej niż na Merkurym?
+    </p>
+  </section>
+
+  <section id="variable-stars-meaning" class="section">
+    <h1>Czym są gwiazdy zmienne?</h1>
+    <p>
+      Gwiazda zmienna to taka, która zmienia swoją jasność w znaczący sposób. Ogólnie rzecz biorąc, każda gwiazda wykazuje drobne zmiany jasności, ale są one w większości przypadków niezauważalne. Nawet
+      Słońce zmienia swoją jasność, choć jedynie o 0.1%. Gwiazdy zmienne, którymi się zainteresowałem i które nadają się do obserwacji potrafią jaśnieć i ciemnieć setki, tysiące a nawet dziesiątki tysięcy razy.
+      Obserwując taką gwiazdę i zapisując jej jasność można po pewnym czasie wyraźnie zauważyć, że nie świeci ona stałą jasnością. Jest wiele rodzajów gwiazd zmiennych. Jedne zmieniają się
+      na przestrzeni godzin i dni, inne potrzebują więcej czasu (nawet rok i więcej). Również przyczyna zmian nie zawsze jest taka sama. Niekiedy jest ona spowodowana czynnikami zewnętrznymi np. zakrycie jednej
+      gwiazdy przez drugą, czasem jej strukturą fizyczną (gwiazda kurczy się i rozszerza zmieniając tym samym swoją moc promieniowania). Na chwilę obecną znamy ponad 150 000 gwiazd zmiennych i każdego dnia liczba ta rośnie.
+    </p>
+  </section>
+
+  <section id="variable-stars-history" class="section">
+    <h1>Trochę historii</h1>
+    <p>
+      Pierwsze gwiazdy zmienne odkryto już w epoce przedteleskopowej. W 1596 roku David Fabricius zauważył okresowe znikanie gwiazdy <i>omicron ceti</i> (nazwanej później Mirą). Obserwowano w tym czasie
+      również dwie jasne supernowe. Zjawiska te dowiodły, że gwiazdy tak naprawdę nie są niezmienne tak jak wcześniej sądzono. W 1786r. znano już 12 gwiazd zmiennych. Od połowy XIX wieku liczba znanych
+      zmiennych wzrastała coraz szybciej. W 1875 znano już 143 zmienne, w 1903 – 700, w 1947 – 11 tysięcy.
+    </p>
+  </section>
+
+  <section id="why-observe-variable-stars" class="section">
+    <h1>W jakim celu obserwować gwiazdy zmienne?</h1>
+    <ul style="text-align:left">
+      <li>Zdaża się, że przyczyną zmian gwiazdy jest przejście przed jej tarczą planety. Dzięki obserwacjom takiej gwiazdy można dowiedzieć się wiele o tej planecie i wywnioskować czy może istnieć na niej życie.</li>
+      <li>Gwiazdy zmienne zdardzają nam sekrety swojej ewolucji i pozwalają nam tym samym lepiej zrozumieć naszą własną gwiazdę – Słońce.</li>
+      <li>Dzięki ich obserwacji dowiadujemy się o najważniejszych właściwościach gwiazd takich jak masa, jasność, promień, temperatura, wewnętrzna i zewnętrzna struktura.</li>
+      <li>Obserwacja niektórych gwiazd zmiennych (Cefeidy i RR Lyrae) pozwala nam określić odległość od nich. Gdy znajdują się w innej galaktyce poznajemy wówczas odległość od nas do tej galaktyki. </li>
+      <li>Spędzanie czasu pod gwieździstym niebem i obserwacja sprawiają przyjemność a wyniki, które są używane potem w poważnych publikacjach, dużo satysfakcji <i class="far fa-smile"></i>.</li>
+    </ul>
+  </section>
+
+
+
+
+  <div class="variable-stars-container" id="search-for-variable-star">
+    <h1>Wyszukiwanie gwiazdy zmiennej</h1>
+    <label for="search"><i>Wyszukaj gwiazdę zmienną: &nbsp;&nbsp;</i></label><input type="text" id="search" name="search" value="" placeholder="R Sct, Z UMa, DF Cyg ...">
+    <br />
+    <br />
+    <i>Okres czasu: &nbsp;&nbsp;</i>
+    <label for="since">od &nbsp;</label><input type="text" id="since" name="since" value="">
+    <label for="to">&nbsp;do &nbsp;</label><input type="text" id="to" name="to" value="">
+    <br />
+    <br />
+    <button class="btn" style="margin: 0 auto;transform: translate(0,0);">Wyszukaj gwiazdę</button>
+    <br />
+    <canvas id="canvasGraph"></canvas>
+
+    <h1 id="add-your-observation">Dodaj swoją obserwację</h1>
+
+    <div style="display: flex;justify-content:center;margin-top: 3%">
+      <div style="text-align: right">
+        <form method="post">
+          <label for="name"><i>Imię i nazwisko: &nbsp;&nbsp;</i></label><input type="text" id="name" name="name"><br /><br />
+          <label for="star_name"><i>Nazwa gwiazdy: &nbsp;&nbsp;</i></label><input type="text" id="star_name" value="R Ser" name="star_name"><br /><br />
+          <label for="luminosity"><i>Jasność: &nbsp;&nbsp;</i></label><input type="text" id="luminosity" name="luminosity" value=""><br /><br />
+          <label for="date"><i>Data: &nbsp;&nbsp;</i></label><input type="text" id="date" name="date" placeholder="RRRR-MM-DD"><br /><br />
+          <label for="time"><i>Godzina: &nbsp;&nbsp;</i></label><input type="text" id="time" name="time" placeholder="HH:MM:SS"><br /><br />
+          <button onclick="uploadObservation(event)" class="btn">Dodaj obserwację!</button>
+        </form>
+
+      </div>
+    </div>
+
+
+
+  </div>
+
+
+  <footer>
+    <div class="footer-row">
+      <div style="margin: 0 1%">
+        <h3>Strona główna</h3>
+        <a href="index.html#beginning">Jak zaczęła się moja przygoda z astronomią?</a><br />
+        <a href="index.html#telescopes">Mój sprzęt obserwacyjny</a><br />
+        <a href="index.html#middle-story">Dalsza cześć historii</a><br />
+        <a href="index.html#astrophotography">Astrofotografia</a>
+      </div>
+      <div style="margin: 0 1%">
+        <h3>Gwiazdy zmienne</h3>
+        <a href="variableStars.html#variable-stars-meaning">Czym są gwiazdy zmienne?</a><br />
+        <a href="variableStars.html#variable-stars-history">Trochę historii</a><br />
+        <a href="variableStars.html#why-observe-variable-stars">W jakim celu obserwować gwiazdy zmienne?</a><br />
+        <a href="variableStars.html#search-for-variable-star">Wyszukiwanie gwiazdy zmiennej</a><br />
+        <a href="variableStars.html#add-your-observation">Dodaj swoją obserwację</a>
+      </div>
+      <div style="margin: 0 1%">
+        <h3>Układ Słoneczny</h3>
+        <a href="solarSystem.html#solar-system">O Układzie Słonecznym</a><br />
+        <a href="solarSystem.html#planets">Porównanie planet</a><br />
+      </div>
+      <div style="margin: 0 1%">
+        <h3>Wydażenia astronomiczne</h3>
+        <a href="astronomicalEvents.html#events">Najbliższe wydarzenia astronomiczne</a><br />
+      </div>
+      <div style="margin: 0 1%">
+        <h3>Kontakt</h3>
+        <a href="contact.html#contact">Jak się ze mną skontaktować?</a><br />
+        <a href="contact.html#opinion">Opinia na temat strony</a><br />
+      </div>
+    </div>
+    <span style="font-size: 0.8em">Projekt na WAI i HIH &copy; Bartosz Salwiczek 2019</span>
+  </footer>
+  <script src="scripts/graphplotter.js"></script>
+  <script src="scripts/observationUpload.js"></script>
+  <script src="scripts/expanded-menu.js"></script>
+
+</body>
+</html>

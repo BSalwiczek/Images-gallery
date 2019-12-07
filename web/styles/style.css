@@ -1,0 +1,508 @@
+body{
+  padding: 0;
+  margin: 0;
+  font-family: 'Cabin', sans-serif;
+}
+
+a{
+  color: #243B58;
+  text-decoration: none;
+}
+
+a:hover{
+  text-decoration: underline;
+}
+
+a:visited{
+  color: #546881;
+}
+
+
+/*---NAVIGATION---*/
+nav{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  background-color: #3A506B;
+}
+
+.nav-active{
+  background-color: #546881;
+}
+
+
+.nav-item:hover{
+  background-color: #546881;
+  cursor: pointer;
+}
+
+.nav-item > a{
+    padding: 2.4vh 2.3vh;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+  color: white;
+  font-size: 2.5vh;
+}
+
+@media only screen and (min-width: 992px) {
+  .expand:hover .expand-menu{
+    display: flex;
+    position: absolute;
+    z-index: 400;
+    background-color: #3A506B;
+    top: 7.8vh;
+    flex-direction: column;
+    opacity: 1;
+  }
+  .expand-menu>a{
+    display: block;
+    padding: 2.4vh 2.3vh;
+    font-size: 2.5vh;
+    color: white !important;
+  }
+  .expand-menu>a:hover{
+    text-decoration: none;
+      background-color: #546881;
+  }
+}
+@media only screen and (max-width: 992px){
+  .expand-menu>a{
+    display: block;
+      padding: 2.4vh 2.3vh;
+      color: white !important;
+  }
+  .expand-menu>a:hover{
+    text-decoration: none;
+      background-color: #546881;
+  }
+  .show-menu{
+    display: flex !important;
+    /* position: absolute; */
+    z-index: 400;
+    width: 100%;
+    height: 100%;
+    background-color: #3A506B;
+    flex-direction: column;
+    opacity: 1;
+    transition: height .2s;
+  }
+}
+
+.expand-menu{
+  display: none;
+}
+
+/*-------------------*/
+
+.main-img{
+  height: 50vh;
+  width: 100%;
+  object-fit: cover;
+  filter: brightness(70%);
+}
+
+.img-container{
+  position: relative;
+  min-height: 50vh
+}
+
+.curiosity{
+  text-align: center;
+  padding: 0.1% 0;
+  margin-top: -10px;
+  color: #FFF;
+  background-color: #546881;
+}
+
+.curiosity>p{
+  padding: 0;
+}
+
+.section{
+  text-align: center;
+  width: 70%;
+  padding: 1% 0;
+  margin: 0 auto;
+}
+
+section>h1{
+  font-size: 2em;
+  letter-spacing: 1px;
+  line-height: 1.3em;
+}
+
+section>p{
+  font-size: 1.1em;
+  line-height: 1.5em;
+}
+
+#variable-stars-history>p{
+  margin: 0 auto;
+  width: 70%;
+  margin-bottom: 1%;
+}
+
+#why-observe-variable-stars{
+  line-height: 1.5em;
+  width: 40%;
+}
+
+.telescopes,#variable-stars-history{
+  background-color: #D3D8DD;
+  /* background-color: #A6B0BC; */
+  padding: 1% 0;
+  text-align: center;
+  width: 100%;
+}
+
+/*---Astronomy Equipment---*/
+ul.astronomy-equipment{
+  margin-top: 5vh;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  /* justify-content: space-evenly; */
+  justify-content: center;
+
+}
+ul.astronomy-equipment>li{
+  width: 200px;
+  height: 200px;
+  border-radius: 1000px;
+  border: 2px solid #546881;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3%;
+  position: relative;
+  z-index: 2;
+  background-repeat: no-repeat;
+  transition: all 0.2s ease-in;
+}
+
+ul.astronomy-equipment>li:nth-child(1)
+{
+  background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url("../img/telescope1.jpg");
+  background-size: 80%;
+  background-position: 70% -30%;
+}
+ul.astronomy-equipment>li:nth-child(1):hover{
+  background-size: 85% !important;
+  background-position: 70% -15% !important;
+  transition: all 0.2s ease-in;
+}
+
+ul.astronomy-equipment>li:nth-child(2){
+  margin: 0 5%;
+  background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url("../img/binoculars.jpg");
+  background-size: 80%;
+  background-position: 40% 45%;
+}
+ul.astronomy-equipment>li:nth-child(2):hover{
+  background-size: 85% !important;
+  background-position: 40% 45% !important;
+  transition: all 0.2s ease-in;
+}
+
+ul.astronomy-equipment>li:nth-child(3){
+  margin: 0 0;
+  background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url("../img/dobson.jpg");
+  background-size: 80%;
+  background-position: 40% 45%;
+}
+ul.astronomy-equipment>li:nth-child(3):hover{
+  background-size: 85% !important;
+  background-position: 40% 45% !important;
+  transition: all 0.2s ease-in;
+}
+
+
+
+
+ul.astronomy-equipment>li>span{
+  background-color: rgba(255,255,255,0.7);
+  border-radius: 1000px;
+  padding: 4%;
+}
+
+/* .equipment-img{
+  width: 100%;
+  position: absolute;
+  z-index: 0;
+
+} */
+
+header{
+  position: absolute;
+  font-size: 10vh;
+  width: 80%;
+  text-align: center;
+  z-index: 3;
+  letter-spacing: 5px;
+  top: 40%;
+  left: 50%;
+  color: white;
+  transform: translate(-50%,-50%);
+  font-family: 'Bree Serif', serif;
+}
+
+/*---Observations---*/
+.observations{
+  background-color: #546881;
+  text-align:center;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content:space-evenly;
+  padding: 1% 0;
+}
+
+/*---Gallery---*/
+.gallery-row{
+  margin-top: 4%;
+  display: flex;
+  justify-content: center;
+}
+.gallery-row>.my-photo{
+}
+.gallery-row>.gallery-column>img{
+  width: 100%;
+}
+.gallery-row>.gallery-column:nth-child(1){
+  width: 25%;
+  margin-right: 5px;
+}
+.gallery-row>.gallery-column:nth-child(2){
+  width: 30%;
+  margin-right: 5px;
+}
+.gallery-row>.gallery-column:nth-child(3){
+  width: 25%;
+  margin-right: 5px;
+}
+.gallery-row>.gallery-column:nth-child(4){
+  width: 25%;
+}
+
+.gallery-column>img{
+  transition: all 0.2s;
+}
+
+.gallery-column>img:hover{
+  opacity: 0.7;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+footer{
+  margin-top: 10%;
+  padding: 1%;
+  color: white;
+  background-color: #07182D;
+  text-align: center;
+}
+
+.footer-row{
+  margin-bottom: 1%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  line-height: 1.5em;
+  text-align: left;
+
+}
+
+.footer-row>div>a,.footer-row>div>a:hover,.footer-row>div>a:visited{
+  color: white;
+}
+
+.container,.opinion-container{
+  width: 70%;
+  padding: 2%;
+  text-align: center;
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.17);
+  margin: 0 auto;
+  background-color: white;
+}
+
+input[type="text"],textarea,input[type="number"],input[type="email"]
+{
+  padding: 1vh;
+  border: 1px solid #ddd;
+}
+
+input[type="text"]:focus,,input[type="number"]:focus,textarea:focus,,input[type="email"]:focus{
+  outline: none;
+  /* border: 2px solid #546881; */
+    box-shadow:  0px 0px 5px 0px rgba(84,104,129,0.3);
+}
+
+#canvasGraph{
+  margin: 5%;
+  width: 80%;
+  /* height: 400px; */
+}
+
+.btn{
+  /* margin-right: 30%; */
+  /* transform: translate(-60%,0); */
+  background-color: #546881;
+  border: none;
+  padding: 1.5em;
+  border-radius: 10px;
+  color: white;
+  transition: all .2s;
+}
+
+.btn:hover{
+  background-color: #768699;
+  cursor: pointer;
+  transition: all .2s;
+
+}
+
+.astro-event{
+  border-left: 2px solid #546881;
+  display: block;
+  box-shadow:  0px 0px 5px 0px rgba(255,255,255,0.2);
+  padding: 1% 0;
+  margin: 1% auto;
+  width: 80% !important;
+  background-color: #f1f2f3;
+
+}
+
+.solar-system-img{
+  max-width: 90%;
+  margin: 2% auto;
+}
+
+/*---TABLE---*/
+table{
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+th,td{
+  padding: 1vw;
+    border: 1px solid #ccc;
+}
+tr:nth-child(even){
+  background-color: #f1f2f3;
+}
+/*-------------*/
+
+.svg-graphic{
+  width: 100%;
+  height: 27vw;
+}
+
+.svg-element{
+  max-width: 3%;
+  transform-origin: 0% 36%;
+  transform-box: fill-box;
+}
+.svg-element circle{
+  transition: fill 0.5s;
+}
+.svg-element:hover circle{
+  cursor: pointer;
+  fill: black !important;
+  transition: fill 0.5s;
+}
+
+
+@media only screen and (max-width: 992px) {
+  nav {
+    flex-direction: column;
+  }
+  .nav-item{
+    text-align: center;
+  }
+  header{
+    font-size: 4rem;
+  }
+  .nav-item > a{
+    font-size: 1em;
+  }
+  .beginning{
+    width: 90%;
+  }
+  ul.astronomy-equipment{
+    flex-direction: column;
+    align-items: center;
+  }
+  ul.astronomy-equipment>li:not(:first-child){
+    margin-top: 10vh;
+  }
+  ul.astronomy-equipment>li{
+    width: 300px;
+    height: 300px;
+  }
+  .observations{
+    flex-direction: column;
+  }
+  .gallery-row>.gallery-column:nth-child(1){
+    width: 100%;
+    margin-right: 5px;
+  }
+  .gallery-row>.gallery-column:nth-child(2){
+    width: 100%;
+    margin-right: 5px;
+  }
+  .gallery-row>.gallery-column:nth-child(3){
+    width: 100%;
+    margin-right: 5px;
+  }
+  .gallery-row>.gallery-column:nth-child(4){
+    width: 100%;
+  }
+  #why-observe-variable-stars{
+    width: 90%;
+  }
+  #canvasGraph{
+    width: 90%;
+    /* height: 400px; */
+  }
+  .astro-event{
+      padding: 3% 2%;
+    width: 100% !important;
+  }
+  .container,.opinion-container{
+    width: 95%;
+
+  }
+  .footer-row{
+    flex-direction: column;
+    padding: 2% 5%;
+
+  }
+  .footer-row>div>h3{
+    margin-top: 5% !important;
+    margin-bottom: 2% !important;
+  }
+  .solar-system-img{
+    max-width: 100%;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  header{
+    font-size: 3rem;
+  }
+  .nav-item > a{
+    font-size: 0.8em;
+  }
+  .beginning,.middle-story{
+    width: 100%;
+  }
+  .beginning>p,.middle-story>p,.curiosity>p{
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+}

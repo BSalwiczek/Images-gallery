@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Strona o moim hobby - astronomii">
+  <meta name="keywords" content="Astronomia, astrofizyka, pasja, hobby">
+  <meta name="author" content="Bartosz Salwiczek">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontakt</title>
+  <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Cabin&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="styles/style.css">
+  <link rel="stylesheet" type="text/css" href="styles/gallery.css">
+  <script src="https://kit.fontawesome.com/50926e5c21.js" crossorigin="anonymous"></script> <!-- font awesome -->
+
+
+</head>
+<body lang="pl">
+  <nav>
+    <div class="nav-item">
+      <a href="index.html"><i class="fas fa-home"></i> &nbsp;Strona główna</a>
+    </div>
+    <div class="nav-item">
+      <a href="variableStars.html"><i class="fas fa-star"></i> &nbsp;Gwiazdy zmienne</a>
+    </div>
+    <div class="nav-item expand">
+      <a href="#!" id="expanded-link"><i class="fas fa-long-arrow-alt-down"></i> &nbsp;Ciekawe tematy</a>
+      <div class="expand-menu">
+          <a href="solarSystem.html"><i class="fas fa-sun"></i> &nbsp;Układ Słoneczny</a>
+          <a href="astronomicalEvents.html"><i class="fas fa-calendar-alt"></i> &nbsp;Najbliższe wydarzenia astronomiczne</a>
+      </div>
+    </div>
+    <div class="nav-item nav-active">
+      <a href="contact.html"><i class="fas fa-envelope-open-text"></i> &nbsp;Kontakt</a>
+    </div>
+  </nav>
+
+  <div class="img-container">
+      <header>
+        Kontakt
+      </header>
+      <img class="main-img" src="img/header-img.jpg" />
+  </div>
+
+  <section class="curiosity">
+    <p>
+      Czy wiesz że pomimo że Wenus jest dalej od Słońca jest na niej cieplej niż na Merkurym?
+    </p>
+  </section>
+
+  <section id="contact" class="section">
+    <h2>Jak się ze mną skontaktować?</h2>
+    <p>Zaciekawiły Cię treści publikowane na stronie? Znalazłeś nieścisłość albo błąd o którym chciałbyś mi powiedzieć? A może po prostu chcesz się umówić na wspólne obserwacje?
+    <br/>Jeśli tak oto mój mail na który możesz wysyłać wszelkie zapytania/prośby/propozycje!<br /> <a href="mailto:test@test.pl">test@test.pl</a></p>
+  </section>
+
+  <section id="opinion" class="section opinion-container">
+    <h2>Opinia na temat strony</h2>
+    <p>Jeśli chciałbyś wystawić opinię na temat tej strony skorzystaj z poniższego formularza.</p>
+    <form method="post">
+      <div style="display: flex;justify-content:center;margin-top: 3%">
+        <div style="text-align: right">
+        <label for="name"><i>Imię &nbsp;&nbsp;</i></label><input type="text" id="name" name="name"><br /><br />
+        <label for="surname"><i>Nazwisko: &nbsp;&nbsp;</i></label><input type="text" id="surname" name="surname"><br /><br />
+        <label for="email"><i>Email: &nbsp;&nbsp;</i></label><input type="email" id="email" name="email"><br /><br />
+        </div>
+      </div>
+
+      <h3 style="margin: 2% 0;padding:0">Jak trafiłeś na tę stronę?</h3>
+
+      <div style="display: flex;justify-content:center;margin-top: 3%">
+        <div style="text-align: left">
+          <input type="radio" name="how-visit"><label for="how-visit"><i> &nbsp;&nbsp;Wyszukiwarka</i></label><br /><br />
+          <input type="radio" name="how-visit"><label for="how-visit"><i> &nbsp;&nbsp;Polecono mi ją</i></label><br /><br />
+          <input type="radio" name="how-visit"><label for="how-visit"><i> &nbsp;&nbsp;Inne:</i></label><br /><br />
+        </div>
+      </div>
+
+      <label for="quantity"><b>Oceń stronę w skali od 1 (najniższa) do 10 (najwyższa): &nbsp;&nbsp;</b></label><input type="number" id="quantity" name="quantity" min="1" max="10">
+
+      <h3 style="margin: 2% 0;padding:0">Jaką funkcjonalność dodać do strony?</h3>
+      <div style="display: flex;justify-content:center;margin-top: 3%">
+        <div style="text-align: left">
+          <input type="checkbox" name="op1"><label for="op1"><i> &nbsp;&nbsp;Komentarze</i></label><br /><br />
+          <input type="checkbox" name="op2"><label for="op2"><i> &nbsp;&nbsp;Quiz astronomiczny</i></label><br /><br />
+          <input type="checkbox" name="opt3"><label for="opt3"><i> &nbsp;&nbsp;Forum astronomiczne</i></label><br /><br />
+        </div>
+      </div>
+
+      <h3 style="margin: 2% 0;padding:0">Napisz słownie swoją opinię</h3>
+      <textarea style="width: 50%"></textarea>
+      <br />
+      <div style="display: flex;justify-content:center;margin-top: 3%">
+        <input type="reset" class="btn" style="margin: 1% 0;margin-left: -7%" />
+        <button onclick="submitOpinion(event)" class="btn" style="margin: 1% 0">Wyślij opinię!</button>
+      </div>
+    </form>
+  </section>
+
+
+  <footer>
+    <div class="footer-row">
+      <div style="margin: 0 1%">
+        <h3>Strona główna</h3>
+        <a href="index.html#beginning">Jak zaczęła się moja przygoda z astronomią?</a><br />
+        <a href="index.html#telescopes">Mój sprzęt obserwacyjny</a><br />
+        <a href="index.html#middle-story">Dalsza cześć historii</a><br />
+        <a href="index.html#astrophotography">Astrofotografia</a>
+      </div>
+      <div style="margin: 0 1%">
+        <h3>Gwiazdy zmienne</h3>
+        <a href="variableStars.html#variable-stars-meaning">Czym są gwiazdy zmienne?</a><br />
+        <a href="variableStars.html#variable-stars-history">Trochę historii</a><br />
+        <a href="variableStars.html#why-observe-variable-stars">W jakim celu obserwować gwiazdy zmienne?</a><br />
+        <a href="variableStars.html#search-for-variable-star">Wyszukiwanie gwiazdy zmiennej</a><br />
+        <a href="variableStars.html#add-your-observation">Dodaj swoją obserwację</a>
+      </div>
+      <div style="margin: 0 1%">
+        <h3>Układ Słoneczny</h3>
+        <a href="solarSystem.html#solar-system">O Układzie Słonecznym</a><br />
+        <a href="solarSystem.html#planets">Porównanie planet</a><br />
+      </div>
+      <div style="margin: 0 1%">
+        <h3>Wydażenia astronomiczne</h3>
+        <a href="astronomicalEvents.html#events">Najbliższe wydarzenia astronomiczne</a><br />
+      </div>
+      <div style="margin: 0 1%">
+        <h3>Kontakt</h3>
+        <a href="contact.html#contact">Jak się ze mną skontaktować?</a><br />
+        <a href="contact.html#opinion">Opinia na temat strony</a><br />
+      </div>
+    </div>
+    <span style="font-size: 0.8em">Projekt na WAI i HIH &copy; Bartosz Salwiczek 2019</span>
+  </footer>
+
+  <script
+    src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+    crossorigin="anonymous"></script>
+  <script src="scripts/submitOpinion.js"></script>
+  <script src="scripts/expanded-menu.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,5 @@
+*.json
+*.phar
+*.lock
+vendor/
+storage/images/*

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Strona o moim hobby - astronomii">
+  <meta name="keywords" content="Astronomia, astrofizyka, pasja, hobby">
+  <meta name="author" content="Bartosz Salwiczek">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wydarzenia astronomiczne</title>
+  <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Cabin&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="styles/style.css">
+  <link rel="stylesheet" type="text/css" href="styles/gallery.css">
+  <script src="https://kit.fontawesome.com/50926e5c21.js" crossorigin="anonymous"></script> <!-- font awesome -->
+
+
+</head>
+<body lang="pl">
+  <nav>
+    <div class="nav-item">
+      <a href="index.html"><i class="fas fa-home"></i> &nbsp;Strona główna</a>
+    </div>
+    <div class="nav-item">
+      <a href="variableStars.html"><i class="fas fa-star"></i> &nbsp;Gwiazdy zmienne</a>
+    </div>
+    <div class="nav-item expand">
+      <a href="#!" id="expanded-link" class="nav-active"><i class="fas fa-long-arrow-alt-down"></i> &nbsp;Ciekawe tematy</a>
+      <div class="expand-menu">
+          <a href="solarSystem.html" ><i class="fas fa-sun"></i> &nbsp;Układ Słoneczny</a>
+          <a href="astronomicalEvents.html" class="nav-active"><i class="fas fa-calendar-alt"></i> &nbsp;Najbliższe wydarzenia astronomiczne</a>
+      </div>
+    </div>
+    <div class="nav-item">
+      <a href="contact.html"><i class="fas fa-envelope-open-text"></i> &nbsp;Kontakt</a>
+    </div>
+  </nav>
+
+  <div class="img-container">
+      <header>
+        Wydarzenia
+      </header>
+      <img class="main-img" src="img/header-img.jpg" />
+  </div>
+
+  <section class="curiosity">
+    <p>
+      Czy wiesz że pomimo że Wenus jest dalej od Słońca jest na niej cieplej niż na Merkurym?
+    </p>
+  </section>
+
+  <section class="section" id="events">
+    <h2  style="margin: 2% 0">Najbliższe wydarzenia astronomiczne</h2>
+    <div class="astro-event">11 listopada 2019 - tanzyt Merkurego na tle tarczy Słońca</div>
+    <div class="astro-event">26 grudnia 2019 - obrączkowe zaćmienie Słońca</div>
+    <div class="astro-event">10 stycznia 2020 - częściowe zaćmienie Księżyca</div>
+    <div class="astro-event">5 czerwca 2020 - częściowe zaćmienie Księżyca</div>
+    <div class="astro-event">21 czerwca 2020 - obrączkowe zaćmienie Słońca</div>
+    <div class="astro-event">5 lipca 2020 - częściowe zaćmienie Księżyca</div>
+    <div class="astro-event">30 listopada 2020 - częściowe zaćmienie Księżyca</div>
+    <div class="astro-event">14 grudnia 2020 - całkowite zaćmienie Słońca</div>
+
+  </section>
+
+
+  <footer>
+    <div class="footer-row">
+      <div style="margin: 0 1%">
+        <h3>Strona główna</h3>
+        <a href="index.html#beginning">Jak zaczęła się moja przygoda z astronomią?</a><br />
+        <a href="index.html#telescopes">Mój sprzęt obserwacyjny</a><br />
+        <a href="index.html#middle-story">Dalsza cześć historii</a><br />
+        <a href="index.html#astrophotography">Astrofotografia</a>
+      </div>
+      <div style="margin: 0 1%">
+        <h3>Gwiazdy zmienne</h3>
+        <a href="variableStars.html#variable-stars-meaning">Czym są gwiazdy zmienne?</a><br />
+        <a href="variableStars.html#variable-stars-history">Trochę historii</a><br />
+        <a href="variableStars.html#why-observe-variable-stars">W jakim celu obserwować gwiazdy zmienne?</a><br />
+        <a href="variableStars.html#search-for-variable-star">Wyszukiwanie gwiazdy zmiennej</a><br />
+        <a href="variableStars.html#add-your-observation">Dodaj swoją obserwację</a>
+      </div>
+      <div style="margin: 0 1%">
+        <h3>Układ Słoneczny</h3>
+        <a href="solarSystem.html#solar-system">O Układzie Słonecznym</a><br />
+        <a href="solarSystem.html#planets">Porównanie planet</a><br />
+      </div>
+      <div style="margin: 0 1%">
+        <h3>Wydażenia astronomiczne</h3>
+        <a href="astronomicalEvents.html#events">Najbliższe wydarzenia astronomiczne</a><br />
+      </div>
+      <div style="margin: 0 1%">
+        <h3>Kontakt</h3>
+        <a href="contact.html#contact">Jak się ze mną skontaktować?</a><br />
+        <a href="contact.html#opinion">Opinia na temat strony</a><br />
+      </div>
+    </div>
+    <span style="font-size: 0.8em">Projekt na WAI i HIH &copy; Bartosz Salwiczek 2019</span>
+  </footer>
+  <script
+    src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+    crossorigin="anonymous"></script>
+  <script src="scripts/expanded-menu.js"></script>
+
+
+</body>
+</html>

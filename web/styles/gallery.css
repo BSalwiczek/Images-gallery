@@ -1,0 +1,31 @@
+#gallery{
+visibility: hidden;
+  background-color: #000;
+background-color: rgba(0,0,0,0);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  /* display: flex;
+  justify-content: center; */
+  transition: all 0.2s;
+}
+
+
+#gallery>img{
+  height: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+
+.arrows{
+  margin-top: 1%;
+  color: white;
+  opacity: 0;
+  transition: all 0.2s;
+}
