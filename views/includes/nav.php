@@ -16,10 +16,22 @@
     <a href="contact.html"><i class="fas fa-envelope-open-text"></i> &nbsp;Kontakt</a>
   </div> -->
 
-  <div class="nav-item">
-    <a href="/logowanie"><i class="fas fa-sign-in-alt"></i> &nbsp;Logowanie</a>
-  </div>
-  <div class="nav-item">
-    <a href="/rejestracja"><i class="fas fa-plus-circle"></i> &nbsp;Rejestracja</a>
-  </div>
+  <?php
+  if (!isset($_SESSION['username'])){
+    echo '<div class="nav-item ';
+    if($nav_active == 2) echo "nav-active";
+    echo '">
+      <a href="/logowanie"><i class="fas fa-sign-in-alt"></i> &nbsp;Logowanie</a>
+    </div>';
+    echo '<div class="nav-item ';
+    if($nav_active == 3) echo "nav-active";
+    echo '">
+      <a href="/rejestracja"><i class="fas fa-plus-circle"></i> &nbsp;Rejestracja</a>
+    </div>';
+  }else{
+    echo '<div class="nav-item">
+      <a href="/wyloguj"><i class="fas fa-sign-out-alt"></i> &nbsp;Wylogowywanie</a>
+    </div>';
+  }
+  ?>
 </nav>
