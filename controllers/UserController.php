@@ -6,31 +6,59 @@ class UserController
 {
   public function loginPage()
   {
-    return new View('loginView',['nav_active'=>2]);
+    if(!isset($_SESSION['username']))
+    {
+      return new View('loginView',['nav_active'=>2]);
+    }else{
+      return (new View())->redirect('/');
+    }
   }
 
   public function registerPage()
   {
-    foreach (User::get_all() as $user)
+    if(!isset($_SESSION['username']))
     {
-      print_r($user);
+      return new View('registerView',['nav_active'=>3]);
+    }else{
+      return (new View())->redirect('/');
     }
-    return new View('registerView',['nav_active'=>3]);
+  }
+
+  public function logout()
+  {
+    if(isset($_SESSION['username']))
+    {
+      $_SESSION=array();
+      unset($_SESSION);
+      session_destroy();
+      return (new View())->redirect('/');
+    }
   }
 
   public function login()
   {
-    $response = array('errors'=>[]);
-    $this->validateLogin($response);
-    if(empty($response['errors']))
+    if(!isset($_SESSION['username']))
     {
-      $login = $_POST['login'];
-      $password = $_POST['password'];
-      $user = User::getUserByLogin($login);
-      $hashed_password = $user->password;
-      if(password_verify($password, $hashed_password)) {
-        // $session_id = session_id();
-        $_SESSION['username'] = $login;
+      $response = array('errors'=>[]);
+      $this->validateLogin($response);
+      if(empty($response['errors']))
+      {
+        $login = $_POST['login'];
+        $password = $_POST['password'];
+        $user = User::getUserByLogin($login);
+        $hashed_password = $user->password;
+        if(password_verify($password, $hashed_password)) {
+          $_SESSION['username'] = $login;
+          $response['code'] = 200;
+          $_SESSION['data'] = $response;
+        }else{
+          array_push($response['errors'],'Wrong password');
+          $_SESSION['data'] = $response;
+          return (new View())->redirect('/logowanie');
+        }
+      }else{
+        $_SESSION['data'] = $response;
+        return (new View())->redirect('/logowanie');
       }
     }
     return (new View())->redirect('/');
@@ -38,27 +66,27 @@ class UserController
 
   public function register()
   {
-    $response = array('errors'=>[]);
-    $this->validateRegister($response);
-    if(empty($response['errors']))
+    if(!isset($_SESSION['username']))
     {
-      $email = $_POST['email'];
-      $login = $_POST['login'];
-      $password = $_POST['password'];
-      $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-      $user = new User($email, $login, $hashed_password);
-      $user->save();
+      $response = array('errors'=>[]);
+      $this->validateRegister($response);
+      if(empty($response['errors']))
+      {
+        $email = $_POST['email'];
+        $login = $_POST['login'];
+        $password = $_POST['password'];
+        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+        $user = new User($email, $login, $hashed_password);
+        $user->save();
 
-      $response['code'] = 200;
-    }else{
-      $response['code'] = 500;
-    }
-
-    $_SESSION['data'] = $response;
-
-    // return new View('registerView',['nav_active'=>2]);
-
-    return (new View())->redirect('/rejestracja');
+        $response['code'] = 200;
+      }else{
+        $response['code'] = 500;
+      }
+      $_SESSION['data'] = $response;
+      return (new View())->redirect('/rejestracja');
+    }else
+      return (new View())->redirect('/');
   }
 
   private function validateLogin(&$response)

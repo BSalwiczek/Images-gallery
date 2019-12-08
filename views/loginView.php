@@ -26,12 +26,12 @@
   </div>
 
   <section class="section">
-      <h1 style="color: #4CBB17">
+      <h1 style="color: red">
         <?php
-        if(isset($code))
+        if(isset($errors))
         {
-          if($code == 200)
-            echo 'Zdjęcie zostało dodane! Przejdź do galerii aby je obejrzeć';
+          if(in_array('Wrong password', $errors))
+            echo 'Dane do logowania nie są poprawne. Spróbuj jeszcze raz.';
         }
         ?>
       </h1>

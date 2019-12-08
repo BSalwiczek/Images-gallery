@@ -5,6 +5,12 @@
   <div class="nav-item <?php if($nav_active == 1) echo "nav-active" ?>">
     <a href="/dodaj-zdjecie"><i class="fas fa-image"></i> &nbsp;Prześlij zdjęcie</a>
   </div>
+  <div class="nav-item <?php if($nav_active == 4) echo "nav-active" ?>">
+    <a href="/polubione-zdjecia"><i class="fas fa-images"></i> &nbsp;Polubione zdjęcia</a>
+  </div>
+  <div class="nav-item <?php if($nav_active == 5) echo "nav-active" ?>">
+    <a href="/wyszukiwarka"><i class="fas fa-search"></i> &nbsp;Wyszukiwarka</a>
+  </div>
   <!-- <div class="nav-item expand">
     <a href="#!" id="expanded-link"><i class="fas fa-long-arrow-alt-down"></i> &nbsp;Ciekawe tematy</a>
     <div class="expand-menu">

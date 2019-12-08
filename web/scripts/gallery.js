@@ -1,5 +1,5 @@
 $( document ).ready(function() {
-    $(".gallery-img").click(function(data){
+    $(document).on("click",".gallery-img",function(data){
       var src = $(data.target).attr('name');
       $('#gallery').find('.image').remove();
       $('#gallery').css("visibility","visible");
@@ -18,7 +18,6 @@ $( document ).ready(function() {
         $('#gallery').css("background-color","rgba(0,0,0,0)");
         $('#gallery').find('.image').css("visibility","hidden");
         $('#gallery').css("visibility","hidden");
-        // $('#gallery').find('.arrows').css("opacity","0");
 
       }
 

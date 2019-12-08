@@ -11,6 +11,7 @@ require 'vendor/autoload.php';
 
 require_once 'routing/routing.php';
 require_once 'dispatcher.php';
+require_once 'View.php';
 
 // print_r($router->get);
 
@@ -18,6 +19,14 @@ $action_url = $_GET['action'];
 
 $dispatcher = new Dispatcher();
 
-$view = $dispatcher->dispatch($router,$action_url);
+$controller_response = $dispatcher->dispatch($router,$action_url);
 
-$dispatcher->build_response($view);
+if($controller_response instanceof View) //normal request
+  $dispatcher->build_response($controller_response);
+else //API request
+{
+  if(is_array($controller_response))
+    print(json_encode($controller_response));
+  else
+    print($controller_response);
+}

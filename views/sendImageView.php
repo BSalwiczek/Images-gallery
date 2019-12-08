@@ -50,13 +50,16 @@
           if(in_array('No title', $errors))
             echo '<div style="text-align: center; color: red">Podaj tytuł zdjęcia</div><br />';
         ?>
-        <label for="surname"><i>Autor: &nbsp;&nbsp;</i></label><input type="text" id="author" name="author"><br /><br />
+        <label for="surname"><i>Autor: &nbsp;&nbsp;</i></label><input type="text" id="author" name="author"
+        <?php if(isset($_SESSION['username']))
+          echo 'value="'.$_SESSION['username'].'"'?>
+        ><br /><br />
         <?php
         if(isset($errors))
           if(in_array('No author', $errors))
             echo '<div style="text-align: center; color: red">Podaj autora zdjęcia</div><br />';
         ?>
-        <label for="surname"><i>Znak wodny: &nbsp;&nbsp;</i></label><input type="text" id="watermark" name="watermark"><br /><br />
+        <label style="margin-left: -15%;" for="watermark"><i>Znak wodny: &nbsp;&nbsp;</i></label><input type="text" id="watermark" name="watermark"><br /><br />
         <?php
         if(isset($errors))
           if(in_array('No watermark', $errors))
@@ -73,10 +76,22 @@
             if(in_array('Too big image', $errors))
               echo '<div style="text-align: center; color: red">Wysłane zdjęcie przekroczyło 1Mb</div><br />';
           }
-
         }
-
         ?>
+
+        <?php
+        if(isset($_SESSION['username']))
+        {
+          echo '
+          <em>Kto będzie mógł zobaczyć zdjęcie?</em><br />
+          <input type="radio" style="margin: 13px 1px" name="privacy" value="public" /> Wszyscy<br />
+          <input type="radio" style="margin: 5px 1px" name="privacy" value="private" /> Tylko ja <br /><br />
+          ';
+          if(isset($errors)){
+            if(in_array('No privacy', $errors))
+              echo '<div style="text-align: center; color: red">Zaznacz jedno z powyższych pól</div><br />';
+          }
+        }?>
 
         <button class="btn">Wyślij zdjęcie!</button>
         </div>

@@ -6,7 +6,6 @@ class ImagesController
 {
   public function index()
   {
-    $image = new Image();
     return new View('sendImageView',['nav_active'=>1]);
   }
 
@@ -33,7 +32,13 @@ class ImagesController
 
       if(move_uploaded_file($img['tmp_name'],$target_img)) //chown -R www-data folder
       {
-        $image = new Image($img_name, $title, $author);
+        $private = False;
+        if(isset($_SESSION['username']) && isset($_POST['privacy']))
+        {
+          if($_POST['privacy'] == 'private')
+            $private = True;
+        }
+        $image = new Image($img_name, $title, $author,$private);
         $image->save();
         $response['code'] = 200;
       }
@@ -70,6 +75,10 @@ class ImagesController
       if(!in_array($file_extension, $allowed_image_extension))
         array_push($response['errors'],'Bad extension');
     }
+
+    if(isset($_SESSION['username']) && !isset($_POST['privacy']))
+      array_push($response['errors'],'No privacy');
+
   }
 
   private function generateImageName($image_name)

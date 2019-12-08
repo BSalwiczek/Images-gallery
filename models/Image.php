@@ -8,7 +8,7 @@ class Image
   public $private;
   public $collection;
 
-  public function __construct($url = '',$title = '', $author='', $private = True)
+  public function __construct($url = '',$title = '', $author='', $private = False)
   {
     $this->url = $url;
     $this->title = $title;
@@ -31,6 +31,11 @@ class Image
   public static function get_all()
   {
     return get_db()->images->find();
+  }
+
+  public static function get_images_where($query)
+  {
+    return get_db()->images->find($query);
   }
 
   public static function get_images_count()
