@@ -2,4 +2,7 @@
 *.phar
 *.lock
 vendor/
-storage/images/*
+web/storage/images/*
+badformat.bmp
+good.jpg
+toobig.jpg

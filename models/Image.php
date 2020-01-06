@@ -1,5 +1,5 @@
 <?php
-require_once 'models/DB.php';
+require_once 'DB.php';
 class Image
 {
   public $url;
@@ -38,15 +38,16 @@ class Image
     return get_db()->images->find($query);
   }
 
-  public static function get_images_count()
+  public static function get_images_count($query)
   {
-    return get_db()->images->count();
+    return get_db()->images->count($query);
   }
 
-  public static function get_paginate($page_size, $page_num)
+  public static function get_paginate($page_size, $page_num, $query)
   {
     $skips = $page_size * ($page_num - 1);
     $options = [
+        "sort"=>array("_id" => -1 ),
         "limit" => $page_size,
         "skip" => $skips
     ];

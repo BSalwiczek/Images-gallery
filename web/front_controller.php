@@ -7,9 +7,9 @@ error_reporting(E_ALL);
 
 session_start();
 
-require 'vendor/autoload.php';
+require '../vendor/autoload.php';
 
-require_once 'routing/routing.php';
+require_once '../routing/routing.php';
 require_once 'dispatcher.php';
 require_once 'View.php';
 

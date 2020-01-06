@@ -1,6 +1,6 @@
 <?php
 require_once 'View.php';
-require_once 'models/Image.php';
+require_once '../models/Image.php';
 
 
 class FavouritesController
@@ -40,7 +40,7 @@ class FavouritesController
 
   public function removeChecked()
   {
-    print_r($_SESSION);
+    // print_r($_SESSION);
     if(isset($_SESSION['favourites']))
     {
       foreach($_POST as $key => $value)

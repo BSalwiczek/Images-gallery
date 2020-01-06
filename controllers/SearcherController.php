@@ -1,6 +1,6 @@
 <?php
 require_once 'View.php';
-require_once 'models/Image.php';
+require_once '../models/Image.php';
 
 class SearcherController
 {
@@ -14,7 +14,20 @@ class SearcherController
     if (isset($_POST['search_text']) && !empty($_POST['search_text']))
     {
       $input = $_POST['search_text'];
-      $images = Image::get_images_where(["title"=> new \MongoDB\BSON\Regex($input,'i'),"private"=>False]);
+
+      if(!isset($_SESSION['username']))
+      {
+        $query = ["title"=> new \MongoDB\BSON\Regex($input,'i'),"private"=>False];
+      }else
+      {
+        $author = $_SESSION['username'];
+        $query = array('$or'=>array(
+          ["title"=> new \MongoDB\BSON\Regex($input,'i'),"private"=>False],
+          ["title"=> new \MongoDB\BSON\Regex($input,'i'),"private"=>True,"author"=>$author]
+        ));
+      }
+
+      $images = Image::get_images_where($query);
       $imgs_arr = iterator_to_array($images);
       return $imgs_arr;
 

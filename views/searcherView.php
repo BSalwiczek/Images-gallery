@@ -8,8 +8,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Strona główna</title>
   <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Cabin&display=swap" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="web/styles/style.css">
-  <link rel="stylesheet" type="text/css" href="web/styles/gallery.css">
+  <link rel="stylesheet" type="text/css" href="styles/style.css">
+  <link rel="stylesheet" type="text/css" href="styles/gallery.css">
   <script src="https://kit.fontawesome.com/50926e5c21.js" crossorigin="anonymous"></script>
 </head>
 <body lang="pl">
@@ -45,9 +45,9 @@
   <?php include_once('includes/footer.php') ?>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="web/scripts/search.js"></script>
-  <script src="web/scripts/gallery.js"></script>
-  <script src="web/scripts/expanded-menu.js"></script>
+  <script src="scripts/search.js"></script>
+  <script src="scripts/gallery.js"></script>
+  <script src="scripts/expanded-menu.js"></script>
 
 </body>
 </html>

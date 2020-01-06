@@ -15,14 +15,16 @@ $( document ).ready(function() {
         else{
           for(var index in data_json)
           {
-            var item = '<div class="image-gallery-container"><img class="gallery-img" id="'+data_json[index]._id.$oid+'" name="'+data_json[index].url+'" src="storage/images/thumbnail/'+data_json[index].url+'"/><div class="image-description"><div><h3>'+data_json[index].title+'</h3><em>Autor: '+data_json[index].author+'</em></div></div>';
+            if(data_json[index].private == true){
+              var item = '<div class="image-gallery-container private"><img class="gallery-img" id="'+data_json[index]._id.$oid+'" name="'+data_json[index].url+'" src="storage/images/thumbnail/'+data_json[index].url+'"/><div class="image-description"><div><h3>'+data_json[index].title+'</h3><em>Autor: '+data_json[index].author+'</em></div></div>';
+            }
+            else{
+              var item = '<div class="image-gallery-container"><img class="gallery-img" id="'+data_json[index]._id.$oid+'" name="'+data_json[index].url+'" src="storage/images/thumbnail/'+data_json[index].url+'"/><div class="image-description"><div><h3>'+data_json[index].title+'</h3><em>Autor: '+data_json[index].author+'</em></div></div>';
+            }
             $(".images-gallery").append(item);
-            console.log(data_json[index]);
           }
         }
-        console.log(data_json);
       }
-      // console.log("Data: " + data + "\nStatus: " + status);
     });
   })
 

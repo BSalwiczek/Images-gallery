@@ -1,6 +1,6 @@
 <?php
 require_once 'View.php';
-require_once 'models/User.php';
+require_once '../models/User.php';
 
 class UserController
 {
@@ -46,6 +46,12 @@ class UserController
         $login = $_POST['login'];
         $password = $_POST['password'];
         $user = User::getUserByLogin($login);
+        if($user==0)
+        {
+          array_push($response['errors'],'Wrong password');
+          $_SESSION['data'] = $response;
+          return (new View())->redirect('/logowanie');
+        }
         $hashed_password = $user->password;
         if(password_verify($password, $hashed_password)) {
           $_SESSION['username'] = $login;

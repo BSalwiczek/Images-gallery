@@ -8,8 +8,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Strona główna</title>
   <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Cabin&display=swap" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="web/styles/style.css">
-  <link rel="stylesheet" type="text/css" href="web/styles/gallery.css">
+  <link rel="stylesheet" type="text/css" href="styles/style.css">
+  <link rel="stylesheet" type="text/css" href="styles/gallery.css">
   <script src="https://kit.fontawesome.com/50926e5c21.js" crossorigin="anonymous"></script>
 
 
@@ -105,7 +105,7 @@
     src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
     crossorigin="anonymous"></script>
-  <script src="web/scripts/expanded-menu.js"></script>
+  <script src="scripts/expanded-menu.js"></script>
 
 </body>
 </html>

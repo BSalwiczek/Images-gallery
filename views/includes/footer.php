@@ -1,6 +1,6 @@
 <footer>
   <div class="footer-row">
-    <div style="margin: 0 1%">
+    <!-- <div style="margin: 0 1%">
       <h3>Strona główna</h3>
       <a href="index.html#beginning">Jak zaczęła się moja przygoda z astronomią?</a><br />
       <a href="index.html#telescopes">Mój sprzęt obserwacyjny</a><br />
@@ -29,6 +29,6 @@
       <a href="contact.html#contact">Jak się ze mną skontaktować?</a><br />
       <a href="contact.html#opinion">Opinia na temat strony</a><br />
     </div>
-  </div>
-  <span style="font-size: 0.8em">Projekt na WAI i HIH &copy; Bartosz Salwiczek 2019</span>
+  </div> -->
+  <span style="font-size: 0.8em">Galeria zdjęć WAI &copy; Bartosz Salwiczek 2019</span>
 </footer>

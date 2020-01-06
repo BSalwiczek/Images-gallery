@@ -1,6 +1,6 @@
 <?php
 require_once 'View.php';
-require_once 'models/Image.php';
+require_once '../models/Image.php';
 
 class ImagesController
 {
@@ -102,7 +102,7 @@ class ImagesController
     ($extension == 'jpg') ? $image = imagecreatefromjpeg($img) : $image = imagecreatefrompng($img);
 
     $black = imagecolorallocatealpha($image, 255, 255, 255,100);
-    $font = "web/fonts/Roboto.ttf";
+    $font = "fonts/Roboto.ttf";
 
     $width = imagesx($image);
     $height = imagesy($image);

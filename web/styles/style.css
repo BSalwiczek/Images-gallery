@@ -519,7 +519,8 @@ box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.22);
 
 .private
 {
-  border: 5px solid #4B617C;
+  border-left: 5px solid #4B617C;
+  border-right: 5px solid #4B617C;
   width: calc(21% - 10px);
   margin: 1% 2%;
 }

@@ -1,6 +1,6 @@
 <?php
-require_once 'routing/Router.php';
-require_once 'controllers/Controller.php';
+require_once '../routing/Router.php';
+require_once '../controllers/Controller.php';
 require_once 'View.php';
 
 class Dispatcher
@@ -27,7 +27,7 @@ class Dispatcher
       $function = substr($action, $pos+1, strlen($action));
 
     }
-    require_once("controllers/{$controller}.php");
+    require_once("../controllers/{$controller}.php");
     return (new $controller)->$function();
   }
 
@@ -50,6 +50,6 @@ class Dispatcher
       unset($_SESSION['data']);
     }
     extract($data);
-    include_once 'views/' . $view->view_name . '.php';
+    include_once '../views/' . $view->view_name . '.php';
   }
 }
